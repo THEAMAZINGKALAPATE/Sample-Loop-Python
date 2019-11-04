@@ -1,0 +1,14 @@
+from math import *
+balance = 5000
+AIR=0.18
+MPR=0.02
+
+for month in range(0,12,1):
+    MMP = MPR * balance
+    MUB = balance - MMP
+    UB = MUB + (AIR/12.0)*MUB
+    month += 1 
+    balance = UB
+    
+RemBal = round(UB,2)
+print(RemBal)
